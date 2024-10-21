@@ -20,7 +20,7 @@ printf("%i is positive\n", n);
 }
 if (n < 0)
 {
-printf("%i is negarive\n", n);
+printf("%i is negative\n", n);
 }
 if (n == 0)
 {
