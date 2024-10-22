@@ -16,7 +16,7 @@ putchar(' ');
 }
 if (i == 9)
 {
-putchar(i);
+putchar('0' + i);
 }
 }
 printf("\n");
