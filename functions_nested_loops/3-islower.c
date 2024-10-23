@@ -9,7 +9,7 @@
 
 int _islower(int c)
 {
-if (islower(c) == '1')
+if (islower(c) != 0)
 return (1);
 else
 return (0);
