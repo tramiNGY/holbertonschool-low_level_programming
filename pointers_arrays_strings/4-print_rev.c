@@ -16,7 +16,7 @@ length = 0;
 	{
 		i++;
 	}
-	length = i;
+	length = i - 1;
 	
 	while (0 <= length)
 	{
