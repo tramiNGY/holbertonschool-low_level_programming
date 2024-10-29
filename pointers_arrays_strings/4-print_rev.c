@@ -20,10 +20,8 @@ length = 0;
 	i = 0;
 	
 	while (i <= length)
-	{	if (s[length] != ' ')
-		{
-			_putchar(s[length]);
-		}
+	{
+		_putchar(s[length]);
 		length--;
 	}
 _putchar('\n');
