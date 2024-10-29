@@ -15,5 +15,5 @@ for (i = 0; i < n - 1; i++)
 if (n > 0)
 	printf("%d\n", a[n - 1]);
 else
-	printf("%d\n", a[n]);
+	printf("%d\n", a[0]);
 }
