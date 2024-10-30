@@ -11,8 +11,11 @@ int i = 0;
 int length;
 
 length = 0;
+
 while (str[length] != '\0')
+{
 	length++;
+}
 	while (str[i] != '\0')
 	{
 		if (i <= length)
