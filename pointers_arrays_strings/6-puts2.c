@@ -8,12 +8,14 @@
 void puts2(char *str)
 {
 int i = 0;
-int len;
-	
-	len = 224;
+int length;
+
+length = 0;
+while (str[length] != '\0')
+	length++;
 	while (str[i] != '\0')
 	{
-		if (i <= len)
+		if (i <= length)
 		{
 			_putchar(str[i]);
 		}
