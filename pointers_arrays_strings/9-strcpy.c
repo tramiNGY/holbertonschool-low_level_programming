@@ -17,15 +17,13 @@ length = 0;
 
 while (src[length] != '\0')
 {
-        length++;
+	length++;
 }
-while (src[i] != '\0')
+
+while (i < length)
 {
-	if (i <= length)
-	{
-		dest[i] = src[i];
-		i++;
-	}
+	dest[i] = src[i];
+	i++;
 }
 dest[i + 1] = '\0';
 return (dest);
