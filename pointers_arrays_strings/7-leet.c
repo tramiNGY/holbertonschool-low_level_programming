@@ -10,7 +10,7 @@ char *leet(char *s)
 {
 int i, j;
 
-	char encode[20] = "a4A4e3E3o0O0t7T7k1L1";
+	char encode[20] = "a4A4e3E3o0O0t7T7l1L1";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
