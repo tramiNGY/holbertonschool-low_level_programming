@@ -22,8 +22,10 @@ while (src[length] != '\0')
 while (src[i] != '\0')
 {
 	if (i <= length)
+	{
 		dest[i] = src[i];
 		i++;
+	}
 }
 dest[i + 1] = '\0';
 return (dest);
