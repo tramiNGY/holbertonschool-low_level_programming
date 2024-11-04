@@ -17,4 +17,5 @@ while (*s != '\0')
 		return (s);
 	s++;
 }
+return ("");
 }
