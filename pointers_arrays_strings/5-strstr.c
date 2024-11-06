@@ -31,5 +31,5 @@ while (haystack[i] != '\0')
 	else if (haystack[i] != needle[j])
 		i++;
 }
-return ("");
+return (0);
 }
