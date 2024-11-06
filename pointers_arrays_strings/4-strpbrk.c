@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * *_strpbrk - Locates 1st occurence in string 1 of any bytes in string 2
  * @s: string 1
@@ -12,14 +12,14 @@ char *_strpbrk(char *s, char *accept)
 {
 int i;
 
-while (*s != '\0')
-{
-	for (i = 0; accept[i] != '\0'; i++)
+	while (*s != '\0')
 	{
-		if (*s == accept[i])
-			return (s);
+		for (i = 0; accept[i] != '\0'; i++)
+		{
+			if (*s == accept[i])
+				return (s);
+		}
+		s++;
 	}
-	s++;
-}
-return ("");
+	return (0);
 }
