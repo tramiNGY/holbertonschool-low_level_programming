@@ -7,7 +7,7 @@
  * @argv: argument vector array of string containing all arguments
 */
 
-void main(int argc, char **argv)
+void main(int __attribute__((unused)) argc, char **argv)
 {
 	printf("%s\n", argv[0]);
 }
