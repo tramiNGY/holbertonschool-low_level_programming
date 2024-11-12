@@ -3,7 +3,8 @@
 #include "main.h"
 
 /**
- * create_array - creates an array of chars, and initializes it with a specific char
+ * create_array - creates an array of chars,
+ * and initializes it with a specific char
  * @size: array size
  * @c: char
  * Return: returns NULL if fail or size = 0
@@ -20,10 +21,7 @@ unsigned int i;
 	s = malloc(sizeof(c) * size);
 	if (s == NULL)
 		return (NULL);
-	else
-	{
-		for (i = 0; i < size; i++)
-			s[i] = c;
-	}
+	for (i = 0; i < size; i++)
+		s[i] = c;
 return (s);
 }
