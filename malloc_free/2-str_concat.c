@@ -46,7 +46,7 @@ if (concat == NULL)
 for (i = 0; i < length1; i++)
 	concat[i] = s1_save[i];
 
-for (j = length1, i = 0; j < length1 + length2, i < length2; j++, i++)
+for (j = length1, i = 0; j < length1 + length2; j++, i++)
 	concat[j] = s2_save[i];
 
 concat[length1 + length2] = '\0';
