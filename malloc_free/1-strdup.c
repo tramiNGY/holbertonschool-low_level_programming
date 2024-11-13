@@ -7,26 +7,24 @@
  * which contains a copy of the string given as a parameter.
  * @str: string to be copied
  * Return: returns NULL if fails
- * Remark: str_save permits to preserve the start of the pointer to str
- * before calculating its length and points until '\0'
+ * Remark updated: no need to preserve start of pointer if
+ * calculate length with index without moving pointer position
+ * so no need to add additional *str_save pointer to copy
+ * original pointer position of str
 */
 
 char *_strdup(char *str)
 {
 unsigned int i, length;
-char *str_copy, *str_save;
+char *str_copy;
 
 length = 0;
-str_save = str;
 
 	if (str == NULL)
 		return (NULL);
 
-	while (*str != '\0')
-	{
+	while (str[length] != '\0')
 		length++;
-		str++;
-	}
 
 	str_copy = malloc(sizeof(char) * (length + 1));
 
@@ -34,7 +32,7 @@ str_save = str;
 		return (NULL);
 
 	for (i = 0; i < length; i++)
-		str_copy[i] = str_save[i];
+		str_copy[i] = str[i];
 
 	str_copy[length] = '\0';
 
