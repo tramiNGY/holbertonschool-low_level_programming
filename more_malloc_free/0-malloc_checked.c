@@ -3,9 +3,10 @@
 
 /**
  * malloc_checked - allocates memory using malloc
- * if malloc fails, process terminates with value of 98
  * @b: unsigned int b size of memory allocated
  * Return: returns 0
+ * Remark: exit function causes normal process termination
+ * 98 is an arbitrary value
 */
 
 void *malloc_checked(unsigned int b)
@@ -14,7 +15,7 @@ int *ptr;
 
 ptr = malloc(b);
 if (ptr == NULL)
-	*ptr = 98;
+	exit(98);
 
 return (ptr);
 }
