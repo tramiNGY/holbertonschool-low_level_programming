@@ -11,8 +11,10 @@
  * Return: returns NULL if fails
  * Remark: same as for 1-strdup, no need for pointers
  * to save position if we calculte length by index
- * Remark: if s1 or s2 NULL, instead of returning 
+ * Remark2: if s1 or s2 NULL, instead of returning
  * the non-null one, make it empty string
+ * Remark3:  At end of 1st for, i = length1 - 1
+ * at end of 2nd for, i = length 1 + length 2
 */
 
 char *str_concat(char *s1, char *s2)
@@ -42,9 +44,9 @@ if (concat == NULL)
 for (i = 0; i < length1; i++)
 	concat[i] = s1[i];
 
-for (j = length1, i = 0; j < length1 + length2; j++, i++)
-	concat[j] = s2[i];
+for (j = 0; j < length2; j++, i++)
+	concat[i] = s2[j];
 
-concat[length1 + length2] = '\0';
+concat[i] = '\0';
 return (concat);
 }
