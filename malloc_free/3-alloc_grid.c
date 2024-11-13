@@ -7,6 +7,8 @@
  * @width: width of array int for columns
  * @height: height of array int for lines
  * Return: returns NULL if fail
+ * Remark: each line of grid is a pointer
+ * so type of grid[i] is int*
 */
 
 int **alloc_grid(int width, int height)
@@ -16,7 +18,7 @@ int **grid, i, j;
 if ((width <= 0) || (height <= 0))
 	return (NULL);
 
-grid = malloc(sizeof(int) * height);
+grid = malloc(sizeof(int *) * height);
 if (grid == NULL)
 	return (NULL);
 
