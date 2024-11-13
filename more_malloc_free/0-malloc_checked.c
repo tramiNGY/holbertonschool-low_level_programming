@@ -15,4 +15,6 @@ int *ptr;
 ptr = malloc(b);
 if (ptr == NULL)
 	*ptr = 98;
+
+return (ptr);
 }
