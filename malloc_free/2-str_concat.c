@@ -20,9 +20,9 @@ s1_save = s1;
 s2_save = s2;
 
 if (s1 == NULL)
-	return(s2);
+	return (s2);
 if (s2 == NULL)
-	return(s1);
+	return (s1);
 if (s1 == NULL && s2 == NULL)
 	return (NULL);
 
