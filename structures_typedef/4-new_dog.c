@@ -28,7 +28,10 @@ while (owner[length2] != '\0')
 newdog = malloc(sizeof(dog_t));
 
 if (newdog == NULL)
+{
+	free(newdog);
 	return (NULL);
+}
 
 newdog->name = malloc(sizeof(char) * (length1 + 1));
 newdog->owner = malloc(sizeof(char) * (length2 + 1));
