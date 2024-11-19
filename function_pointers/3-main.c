@@ -14,13 +14,13 @@ int main(int argc, char **argv)
 
 if (argc != 4)
 {
-	printf("%s\n", "Error");
+	printf("Error");
 	exit(98);
 }
 
 if ((argv[2][0] == '/' || argv[2][0] == '%') && (atoi(argv[3]) == 0))
 {
-	printf("%s\n", "Error");
+	printf("Error");
 	exit(100);
 }
 
@@ -32,7 +32,7 @@ if (argv[2][0] == '+' || argv[2][0] == '-' || argv[2][0] == '*'
 
 else
 {
-	printf("%s\n", "Error");
+	printf("Error");
 	exit(99);
 }
 return (0);
