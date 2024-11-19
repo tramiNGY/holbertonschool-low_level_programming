@@ -24,7 +24,8 @@ if ((argv[2][0] == '/' || argv[2][0] == '%') && (atoi(argv[3]) == 0))
 	exit(100);
 }
 
-if (get_op_func(argv[2]) == NULL)
+if ((get_op_func(argv[2]) == NULL) || (argv[2][0] != '+' && argv[2][0] != '-'
+		&& argv[2][0] != '*' && argv[2][0] != '/' && argv[2][0] != '%'))
 {
 	printf("Error\n");
 	exit(99);
