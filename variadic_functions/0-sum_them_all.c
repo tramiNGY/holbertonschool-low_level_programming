@@ -20,9 +20,8 @@ if (n == 0)
 	return (0);
 
 va_start(listsum, n);
-sum = n;
-
-for (i = 1; i < n; i++)
+sum = 0;
+for (i = 1; i <= n; i++)
 	sum += va_arg(listsum, int);
 
 va_end(listsum);
