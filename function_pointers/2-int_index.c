@@ -24,8 +24,6 @@ for (i = 0; i < size; i++)
 		return (i);
 
 }
-i = i + 1;
-if (i == size)
-	return (-1);
+
 return (-1);
 }
