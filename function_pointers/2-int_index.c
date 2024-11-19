@@ -18,17 +18,13 @@ int i;
 if (size <= 0)
 	return (-1);
 
-if (size > 0)
+for (i = 0; i < size; i++)
 {
-	for (i = 0; i < size; i++)
-	{
-		if (cmp(array[i]) != 0)
-			return (i);
-
-	}
-	if (i == size - 1 && array[i] == '\0')
-		return (-1);
+	if (cmp(array[i]) != 0)
+		return (i);
 }
+if (array == NULL || cmp == NULL)
+	return (-1);
 
-return (0);
+return (-1);
 }
