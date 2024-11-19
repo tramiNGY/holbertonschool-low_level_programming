@@ -24,18 +24,12 @@ if ((argv[2][0] == '/' || argv[2][0] == '%') && (atoi(argv[3]) == 0))
 	exit(100);
 }
 
-else
+if (get_op_func(argv[2]) == NULL)
 {
-	if (argv[2][0] == '+' || argv[2][0] == '-' || argv[2][0] == '*'
-			|| argv[2][0] == '/' || argv[2][0] == '%')
-	{
-		printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
-	}
-	else
-	{
-		printf("Error\n");
-		exit(99);
-	}
+	printf("Error\n");
+	exit(99);
 }
+
+printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
 return (0);
 }
