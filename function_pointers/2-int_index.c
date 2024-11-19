@@ -25,10 +25,10 @@ if (size > 0)
 		if (cmp(array[i]) != 0)
 			return (i);
 
-	}	
+	}
+	if (i == size - 1 && array[i] == '\0')
+		return (-1);
 }
-else
-	return (-1);
 
 return (0);
 }
