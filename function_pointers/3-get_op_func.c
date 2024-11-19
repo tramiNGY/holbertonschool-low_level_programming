@@ -25,7 +25,7 @@ i = 0;
 
 while (ops[i].op != NULL)
 {
-	if (ops[i].op[0] == s[0])
+	if (ops[i].op[0] == s[0] && ops[i].op[1] == s[1])
 		return (ops[i].f);
 	i++;
 }
