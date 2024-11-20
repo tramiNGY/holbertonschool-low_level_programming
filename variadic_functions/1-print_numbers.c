@@ -16,20 +16,20 @@ va_list listnumb;
 unsigned int i;
 
 if (n == 0)
-{
 	printf("\n");
-	return;
-}
 
-va_start(listnumb, n);
-
-for (i = 0; i < n - 1; i++)
+else
 {
-	printf("%d", va_arg(listnumb, int));
+	va_start(listnumb, n);
 
-	if (separator != NULL)
-		printf("%s", separator);
-}
+	for (i = 0; i < n - 1; i++)
+	{
+		printf("%d", va_arg(listnumb, int));
+
+		if (separator != NULL)
+			printf("%s", separator);
+	}
 	printf("%d\n", va_arg(listnumb, int));
 	va_end(listnumb);
+}
 }
