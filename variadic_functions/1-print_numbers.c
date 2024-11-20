@@ -13,7 +13,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 va_list listnumb;
 unsigned int i;
 
-if (separator != NULL && n > 0)
+if (n == 0)
+	printf("\n");
+
+if (separator != NULL)
 {
 	va_start(listnumb, n);
 
