@@ -16,7 +16,8 @@ unsigned int i;
 if (separator != NULL)
 {
 	va_start(listnumb, n);
-	for (i = 1; i < n; i++)
+
+	for (i = 2; i <= n; i++)
 	{
 		printf("%d", va_arg(listnumb, int));
 		printf("%s", separator);
