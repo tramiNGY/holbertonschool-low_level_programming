@@ -137,6 +137,6 @@ while (format[i] != '\0')
 	j = 0;
 	i++;
 }
-printf("\n");
 va_end(printall);
+printf("\n");
 }
