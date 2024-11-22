@@ -118,12 +118,12 @@ int i, j;
 char *separator;
 
 va_start(printall, format);
-i = 0;
-j = 0;
 separator = "";
+i = 0;
 
 while (format[i] != '\0')
 {
+	j = 0;
 	while (datatype[j].specifier != NULL)
 	{
 		if (format[i] == *datatype[j].specifier)
@@ -134,7 +134,6 @@ while (format[i] != '\0')
 		}
 		j++;
 	}
-	j = 0;
 	i++;
 }
 va_end(printall);
