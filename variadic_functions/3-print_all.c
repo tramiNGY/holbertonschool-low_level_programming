@@ -129,8 +129,8 @@ while (format[i] != '\0')
 		if (format[i] == *datatype[j].specifier)
 		{
 			printf("%s", separator);
-			separator = ", ";
 			datatype[j].print_type(printall);
+			separator = ", ";
 		}
 		j++;
 	}
