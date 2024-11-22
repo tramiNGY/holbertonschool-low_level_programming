@@ -121,7 +121,7 @@ va_start(printall, format);
 separator = "";
 i = 0;
 
-while (format[i] != '\0')
+while (format != NULL && format[i] != '\0')
 {
 	j = 0;
 	while (datatype[j].specifier != NULL)
