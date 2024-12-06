@@ -18,12 +18,13 @@ nodesnumber = 0;
 
 	while (h != NULL)
 	{
-		if (h->str != NULL)
-			printf("[%u] %s\n", h->len, h->str);
+		if (h->str == NULL)
+			printf("[%u] %s\n", 0, "(nil)");
 		else
-			printf("[0] (nil)\n");
-		nodesnumber++;
+			printf("[%u] %s\n", h->len, h->str);
+
 		h = h->next;
+		nodesnumber++;
 	}
 return (nodesnumber);
 }
