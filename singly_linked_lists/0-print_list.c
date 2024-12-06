@@ -14,7 +14,7 @@ size_t nodesnumber;
 nodesnumber = 0;
 
 	if (h == NULL)
-		exit(0);
+		return (-1);
 
 	while (h != NULL)
 	{
