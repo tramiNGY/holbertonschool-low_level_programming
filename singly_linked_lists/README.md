@@ -1,2 +1,2 @@
-!#/bin/bash
-linked list
+#!/bin/bash
+singly linked list
