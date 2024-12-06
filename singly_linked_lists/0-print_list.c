@@ -16,7 +16,7 @@ nodesnumber = 0;
 	while (h != NULL)
 	{
 		if (h->str != NULL)
-			printf("[%u] %s\n", h->len, h->str);
+			printf("[%zu] %s\n", h->len, h->str);
 		else
 			printf("[0] (nil)\n");
 		h = h->next;
