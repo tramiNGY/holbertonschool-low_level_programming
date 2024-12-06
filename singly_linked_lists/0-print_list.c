@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -13,7 +14,7 @@ size_t nodesnumber;
 nodesnumber = 0;
 
 	if (h == NULL)
-		return (0);
+		exit(0);
 
 	while (h != NULL)
 	{
