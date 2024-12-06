@@ -9,9 +9,9 @@
 
 size_t print_list(const list_t *h)
 {
-size_t nodesnumber;
+	size_t nodesnumber;
 
-nodesnumber = 0;
+	nodesnumber = 0;
 
 	if (h == NULL)
 		return (0);
@@ -26,5 +26,6 @@ nodesnumber = 0;
 		nodesnumber++;
 		h = h->next;
 	}
-return (nodesnumber);
+
+	return (nodesnumber);
 }
