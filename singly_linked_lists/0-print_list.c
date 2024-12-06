@@ -14,7 +14,7 @@ size_t nodesnumber;
 nodesnumber = 0;
 
 	if (h == NULL)
-		return (-1);
+		return (0);
 
 	while (h != NULL)
 	{
@@ -22,8 +22,8 @@ nodesnumber = 0;
 			printf("[%u] %s\n", h->len, h->str);
 		else
 			printf("[0] (nil)\n");
-		h = h->next;
 		nodesnumber++;
+		h = h->next;
 	}
 return (nodesnumber);
 }
