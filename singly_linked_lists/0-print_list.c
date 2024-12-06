@@ -11,19 +11,22 @@
 size_t print_list(const list_t *h)
 {
 size_t nodesnumber;
-nodesnumber = 0;
+const list_t *hcopy;
 
-	if (h == NULL)
+nodesnumber = 0;
+hcopy = h;
+
+	if (hcopy == NULL)
 		return (0);
 
-	while (h != NULL)
+	while (hcopy != NULL)
 	{
-		if (h->str != NULL)
-			printf("[%u] %s\n", h->len, h->str);
+		if (hcopy->str != NULL)
+			printf("[%u] %s\n", hcopy->len, hcopy->str);
 		else
 			printf("[0] (nil)\n");
 
-		h = h->next;
+		hcopy = hcopy->next;
 		nodesnumber++;
 	}
 return (nodesnumber);
