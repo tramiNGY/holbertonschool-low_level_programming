@@ -14,18 +14,15 @@ size_t nodesnumber;
 
 nodesnumber = 0;
 
-	if (h == NULL)
-		return (0);
-
 	while (h != NULL)
 	{
-		if (h->str != NULL)
-			printf("[%d] %s\n", h->len, h->str);
-		else
+		if (h->str == NULL)
 			printf("[0] (nil)\n");
+		else
+			printf("[%u] %s\n", h->len, h->str);
 
-		h = h->next;
 		nodesnumber++;
+		h = h->next;
 	}
 return (nodesnumber);
 }
