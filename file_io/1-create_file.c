@@ -19,7 +19,7 @@ int length;
 ssize_t lettersprint;
 
 	length = 0;
-	while (text_content[length] != '\0')
+	while (tesxt_content != NULL && text_content[length] != '\0')
 		length++;
 
 	if (filename == NULL)
