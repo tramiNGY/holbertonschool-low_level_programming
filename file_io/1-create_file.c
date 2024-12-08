@@ -39,5 +39,5 @@ ssize_t lettersprint;
 		}
 	}
 	close(filedescriptor);
-	return (-1);
+	return (1);
 }
