@@ -30,7 +30,7 @@ else
 	while (tempnode->next != NULL)
 		tempnode = tempnode->next;
 	tempnode->next = newnode;
-	tempnode->prev = tempnode;
+	newnode->prev = tempnode;
 }
 return (newnode);
 }
