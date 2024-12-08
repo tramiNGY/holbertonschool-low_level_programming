@@ -20,6 +20,9 @@ newnode->n = n;
 newnode->next = *head;
 newnode->prev = NULL;
 
+	if (*head != NULL)
+		(*head)->prev = newnode;
+
 *head = newnode;
 
 return (newnode);
