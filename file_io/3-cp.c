@@ -23,12 +23,12 @@ char buffer[1024];
 	} file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
 		exit(98);
 	} file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (file_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s", argv[2]);
 		close(file_from);
 		exit(99);
 	} while ((lettersread = read(file_from, buffer, sizeof(buffer))) > 0)
@@ -36,7 +36,7 @@ char buffer[1024];
 		lettersprint = write(file_to, buffer, lettersread);
 		if (lettersprint == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s", argv[2]);
 			close(file_from);
 			close(file_to);
 			exit(99);
@@ -44,14 +44,14 @@ char buffer[1024];
 	}
 	if (lettersread == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
 		close(file_from);
 		close(file_to);
 		exit(98);
 	}
 	if (close(file_from) == -1 || close(file_to) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", file_from);
 		exit(100);
 	} return (0);
 }
