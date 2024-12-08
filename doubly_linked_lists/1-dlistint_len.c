@@ -11,6 +11,8 @@ size_t dlistint_len(const dlistint_t *h)
 {
 unsigned int nodesnumber;
 
+nodesnumber = 0;
+
 while (h != NULL)
 {
 	nodesnumber++;
